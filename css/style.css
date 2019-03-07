@@ -200,16 +200,18 @@ footer .nav-link {
   }
 
   footer .logo {
-    width: 100%;
+    width: 75%;
     margin: 0 auto;
     padding-bottom: 0;
   }
-  footer .nav-bar {
+  footer .nav-bar .nav-item {
     padding: 1rem;
     margin: 0 auto;
     text-align: center;
   }
 }
+
+/*-- Masonry Styles --*/
 
 
 /*---Firefox Bug Fix --*/
