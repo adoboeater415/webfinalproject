@@ -4,7 +4,9 @@ html, body {
   height: 100%;
   width: 100%;
   font-family: 'Lato', sans-serif;
-  color: b
+  color: #000;
+  margin: 0 auto;
+  padding: 0;
 }
 
 .navbar {
@@ -57,9 +59,10 @@ html, body {
   border-radius: 0;
 }
 
+/*
 .padding {
   padding-bottom: 2rem;
-}
+}*/
 
 .welcome {
   width: 75%;
@@ -117,10 +120,109 @@ footer .nav-link {
 
 /*--- Pricing --*/
 
+
+/*-- Masonry Styles --*/
+/**
+ * Button component
+ */
+section .btn {
+  position: relative;
+  top: 0;
+  margin: 55% 30% 30% 35%;
+  opacity: 0;
+  font-size: 1rem;
+  color: #fff;
+  border-radius: 2.1875rem;
+  -webkit-transform: translateY(-50%);
+      -ms-transform: translateY(-50%);
+          transform: translateY(-50%);
+  -webkit-transition: all .25s ease-in-out;
+          transition: all .25s ease-in-out;
+}
+section .btn:focus, .btn:hover {
+  color: #111;
+  background-color: #fff;
+  border-color: #fff;
+}
+
+/**
+ * Grid styles
+ */
+.item__overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(17, 17, 17, 0.45);
+  -webkit-transition: background-color .55s ease-in-out;
+          transition: background-color .55s ease-in-out;
+}
+.item__overlay:focus, .item__overlay:hover {
+  background-color: rgba(17, 17, 17, 0.05);
+}
+.item__overlay:focus > button, .item__overlay:hover > button {
+  opacity: 1;
+}
+
+.grid__sizer,
+.grid__item {
+  position: relative;
+  width: 24.1%;
+  min-width: 16.25rem;
+}
+
+.grid__item {
+  margin-bottom: .9375rem;
+  border-radius: 0.25rem;
+  overflow: hidden;
+}
+
+.grid__item--high,
+.grid__item--high img {
+  height: 480px;
+}
+
+img {
+  width: 100%;
+  max-width: 100%;
+  height: auto;
+}
+
+/**
+ * Link styles
+ */
+a,
+.fa {
+  color: #bbb;
+  -webkit-transition: color .25s ease-in-out;
+          transition: color .25s ease-in-out;
+}
+a:focus, a:hover,
+.fa:focus,
+.fa:hover {
+  text-decoration: none;
+  color: #666;
+}
+
+.active .fa {
+  color: #f62459;
+}
+
 /*---Media Queries --*/
-@media (max-width: 992px) {
+@media (max-width: 1024px) {
+
+  section .btn {
+    margin: 55% 30% 30% 30%;
+  }
+
+  .grid__sizer,
+  .grid__item {
+    width: 32%;
+  }
 
 }
+
 @media (max-width: 768px) {
   .carousel-caption {
     top: 40%;
@@ -161,6 +263,16 @@ footer .nav-link {
   footer .logo {
   width: 100%;
   }
+
+  section .btn {
+    margin: 55% 30% 30% 30%;
+  }
+
+  .grid__sizer,
+  .grid__item {
+    width: 5%;
+  }
+
 }
 @media (max-width: 576px) {
   .carousel-caption {
@@ -210,9 +322,6 @@ footer .nav-link {
     text-align: center;
   }
 }
-
-/*-- Masonry Styles --*/
-
 
 /*---Firefox Bug Fix --*/
 .carousel-item {
